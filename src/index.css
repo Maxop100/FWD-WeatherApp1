@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 100% 97%;
+    --foreground: 210 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 10%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 100% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 20% 50%;
+
+    --accent: 45 100% 55%;
+    --accent-foreground: 210 50% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 210 100% 50%;
+
+    --radius: 1rem;
+
+    /* Weather gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(210 100% 85%) 0%, hsl(210 100% 70%) 100%);
+    --gradient-sunny: linear-gradient(135deg, hsl(45 100% 75%) 0%, hsl(35 100% 65%) 100%);
+    --gradient-cloudy: linear-gradient(135deg, hsl(210 20% 75%) 0%, hsl(210 15% 60%) 100%);
+    --gradient-rainy: linear-gradient(135deg, hsl(210 50% 50%) 0%, hsl(210 60% 35%) 100%);
+    --gradient-card: linear-gradient(135deg, hsla(0 0% 100% / 0.9) 0%, hsla(0 0% 100% / 0.7) 100%);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 210 50% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 45% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 45% 15%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 20%;
+    --muted-foreground: 210 30% 70%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 210 50% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 40% 25%;
+    --input: 210 40% 25%;
+    --ring: 210 100% 60%;
+
+    /* Dark mode gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(210 60% 30%) 0%, hsl(210 70% 20%) 100%);
+    --gradient-sunny: linear-gradient(135deg, hsl(45 80% 45%) 0%, hsl(35 90% 35%) 100%);
+    --gradient-cloudy: linear-gradient(135deg, hsl(210 30% 35%) 0%, hsl(210 25% 25%) 100%);
+    --gradient-rainy: linear-gradient(135deg, hsl(210 50% 25%) 0%, hsl(210 60% 18%) 100%);
+    --gradient-card: linear-gradient(135deg, hsla(210 45% 15% / 0.95) 0%, hsla(210 45% 15% / 0.85) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
